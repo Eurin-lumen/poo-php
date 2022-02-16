@@ -1,12 +1,19 @@
 <?php
-//declare(strict_types=1);
-//Ajout de proprieté
+
+
+declare(strict_types=1);
+// Ajout de propriété nouvelle
+
 class Pont
 {
-   public float $longueur = 0;
+   public float $longueur;
+   public float $largeur;
 }
 
 $pont = new Pont;
-$pont->longueur = 263.0;
+$pont->longueur = 286.0;
+$pont->largeur = 15.0;
 
-var_dump($pont);
+$surface = $pont->longueur * $pont->largeur;
+
+var_dump($surface);
