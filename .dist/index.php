@@ -1,7 +1,7 @@
 <?php
 
 declare(strict_types=1);
-// création d'une fonction spécifique à la tache précédente 
+
 class Pont
 {
    public float $longueur;
@@ -9,17 +9,22 @@ class Pont
   
    public function getSurface(): float
    {
-
-        return $this->longueur * $this->largeur;
+       return $this->longueur * $this->largeur;
    }
 }
-// impression du résultats
 
-$pont = new Pont;
-$pont->longueur = 286.0;
-$pont->largeur = 15.0;
+$towerBridge = new Pont;
+$towerBridge->longueur = 286.0;
+$towerBridge->largeur = 15.0;
 
-$surface = $pont->getSurface();
+$manhattanBridge = new Pont;
+$manhattanBridge->longueur = 2089.0;
+$manhattanBridge->largeur = 36.6;
 
-var_dump($surface);
+$towerBridgeSurface = $towerBridge->getSurface();
+$manhattanBridgeSurface = $manhattanBridge->getSurface();
 
+var_dump($towerBridgeSurface);
+var_dump($manhattanBridgeSurface);
+
+// c'est la manipulation des propretes et des methode depuis notre objet 
