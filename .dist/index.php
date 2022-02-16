@@ -1,12 +1,11 @@
 <?php
- 
-// déclaration de référence à l’objet
-function foo(DateTime $date) {
-    $date->modify('+1 day'); // permet d'ajouter 1 jour à la date
+
+// déclaration par référence avec le symbole &
+function foo(&$var) {
+    $var = 2;
 }
  
-$date = new DateTime;
-foo ($date);
-var_dump($date);
-
-// $date est maintenant au lendemain
+$a=1;
+foo ($a);
+ 
+// $a vaut 2 maintenant
