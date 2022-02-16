@@ -1,10 +1,12 @@
 <?php
-// creation de ma classe
+declare(strict_types=1);
 
-class Personne
+class Pont
 {
-    //elements
+   public float $longueur = 0;
 }
-// instancier la classe
 
-$personne = new Personne;
+$pont = new Pont;
+$pont->longueur = 263.0;
+
+var_dump($pont);
