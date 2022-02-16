@@ -5,22 +5,40 @@ const RESULT_LOSER = -1;
 const RESULT_DRAW = 0;
 const RESULT_POSSIBILITIES = [RESULT_WINNER, RESULT_LOSER, RESULT_DRAW];
 
-function probabilityAgainst(int $levelPlayerOne, int $againstLevelPlayerTwo)
+class Encounter
 {
-    return 1/(1+(10 ** (($againstLevelPlayerTwo - $levelPlayerOne)/400)));
-}
+    public int $levelPlayerOne;
+    public int $againstLevelPlayerTwo; 
 
-function setNewLevel(int &$levelPlayerOne, int $againstLevelPlayerTwo, int $playerOneResult)
-{
-    if (!in_array($playerOneResult, RESULT_POSSIBILITIES)) {
-        trigger_error(sprintf('Invalid result. Expected %s',implode(' or ', RESULT_POSSIBILITIES)));
+    public function probabilityAgainst($levelPlayerOne, $againstLevelPlayerTwo): int
+    {
+        return 1/(1+(10 ** (($this-> againstLevelPlayerTwo - $this->levelPlayerOne)/400)));
     }
 
-    $levelPlayerOne += (int) (32 * ($playerOneResult - probabilityAgainst($levelPlayerOne, $againstLevelPlayerTwo)));
-}
+    public function setNewLevel( &$levelPlayerOne,  $againstLevelPlayerTwo,  $playerOneResult):int
+    {
+        if (!in_array($playerOneResult, RESULT_POSSIBILITIES)) {
+            trigger_error(sprintf('Invalid result. Expected %s',implode(' or ', RESULT_POSSIBILITIES)));
+        }
 
-$greg = 400;
-$jade = 800;
+        $levelPlayerOne += (int) (32 * ($playerOneResult - probabilityAgainst($levelPlayerOne, $againstLevelPlayerTwo)));
+    }
+}
+$encounter = new Encounter;
+
+$greg-> levelPlayerOne = 400;
+$greg-> againstLevelPlayerTwo = 800;
+
+$jade = new Encounter;
+$jade->levelPlayerOne = 400;
+$jade->againstLevelPlayerTwo = 800;
+
+$playerOneResult = $greg-> probabilityAgainst();
+$playerOneResult = $jade-> setNewLevel();
+
+
+//$greg = 400;
+//$jade = 800;
 
 echo sprintf(
     'Greg à %.2f%% chance de gagner face a Jade',
