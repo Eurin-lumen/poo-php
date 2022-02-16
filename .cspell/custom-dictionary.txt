@@ -1,2 +1,22 @@
 # Custom Dictionary Words
+classement
+commencer
+cours
+écrit
+être
+exercices
+fonctionnelle
+manière
+mesure
+pourrait
+pourriez
 propriété
+quel
+souvenez
+squelette
+système
+transformerons
+vais
+Voici
+vous
+Vous
