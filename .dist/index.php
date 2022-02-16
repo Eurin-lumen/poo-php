@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-
+//Ajout de proprieté
 class Pont
 {
    public float $longueur = 0;
