@@ -1,10 +1,15 @@
 # Custom Dictionary Words
+accès
+appellera
 classement
 commencer
 complexité
 cours
+courte
 depuis
+données
 écrit
+enferme
 être
 évolués
 exercices
@@ -18,13 +23,16 @@ manière
 même
 mesure
 methode
+méthode
 niveaux
 pourrait
 pourriez
 privé
 propretes
 propriété
+publique
 quel
+rentre
 renvoie
 sert
 souvenez
@@ -32,6 +40,7 @@ squelette
 système
 transformerons
 vais
+verrouille
 Voici
 vous
 Vous
