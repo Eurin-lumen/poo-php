@@ -1,6 +1,7 @@
 # Custom Dictionary Words
 classement
 commencer
+complexité
 cours
 depuis
 écrit
