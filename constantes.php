@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 class Pont
 {
-   private const UNITE = ‘m²’;
+   private const UNITE = 'm²';
    private float $longueur;
    private float $largeur;
   
