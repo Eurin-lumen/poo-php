@@ -40,6 +40,7 @@ squelette
 système
 transformerons
 vais
+valider
 verrouille
 Voici
 vous
